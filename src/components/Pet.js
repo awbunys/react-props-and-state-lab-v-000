@@ -5,15 +5,17 @@ class Pet extends React.Component {
     super();
   }
 
-  isAdopted = () => {
-    if (isAdopted() === true){
-      document.getElementById("ui primary button").disabled = true, document.getElementById("ui disabled button").disabled = false;
+const adopted = props.isAdopted
 
-    }
-    document.getElementById("ui primary button").disabled = false;
-  }
+
 
   render() {
+    if(adopted === true) {
+      document.getElementsbyClassName("ui primary button")[0].disabled = true;
+      document.getElementsbyClassName("ui disabled button")[0].disabled = false;
+    } else {
+      document.getElementsbyClassName("ui primary button")[0].disabled = false;
+    }
     return (
       <div className="card">
         <div className="content">
