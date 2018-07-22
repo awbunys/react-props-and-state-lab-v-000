@@ -5,11 +5,12 @@ class Pet extends React.Component {
     super();
   }
 
-const adopted = props.isAdopted
+
 
 
 
   render() {
+    const adopted = props.isAdopted
     if(adopted === true) {
       document.getElementsbyClassName("ui primary button")[0].disabled = true;
       document.getElementsbyClassName("ui disabled button")[0].disabled = false;
