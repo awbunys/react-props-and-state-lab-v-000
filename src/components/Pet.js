@@ -3,6 +3,7 @@ import React from 'react';
 class Pet extends React.Component {
   constructor() {
     super();
+    const adopted = props.isAdopted
   }
 
 
@@ -10,7 +11,7 @@ class Pet extends React.Component {
 
 
   render() {
-    const adopted = props.isAdopted
+    
     if(adopted === true) {
       document.getElementsbyClassName("ui primary button")[0].disabled = true;
       document.getElementsbyClassName("ui disabled button")[0].disabled = false;
